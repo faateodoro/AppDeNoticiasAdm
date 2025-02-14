@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
             "author" to author
         )
         db.collection("news").document("aNews")
-            .set(mapNews).addOnCompleteListener { tarefa ->
-                if (tarefa.isSuccessful) {
+            .set(mapNews).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
                     Toast.makeText(this, getString(R.string.info_news_published),
                         Toast.LENGTH_SHORT).show()
                     cleanFields()
